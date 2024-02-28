@@ -25,7 +25,7 @@ layout creation.
 
 ## Installation
 
-1. Download the theme zip file from the repository.
+1. Download the latest release from the [GitHub repository](https://github.com/JosephChuks/kinsmen-wp/releases).
 
 2. Upload and activate the theme through the WordPress dashboard.
 
