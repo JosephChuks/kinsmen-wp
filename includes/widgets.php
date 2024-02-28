@@ -1,18 +1,4 @@
 <?php
-function featured_media()
-    {
-    register_sidebar(array(
-        'name' => esc_html__('Featured media', 'kinsmen-wp'),
-        'id' => 'featured_media',
-        'description' => esc_html__('Add Featured media', 'kinsmen-wp'),
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-    }
-add_action('widgets_init', 'featured_media');
-
 function footer_one()
     {
     register_sidebar(array(
