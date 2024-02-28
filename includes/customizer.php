@@ -147,8 +147,8 @@ add_action('customize_register', 'theme_customizer_settings');
 
 function custom_theme_customizer_styles()
     {
-    $color_primary = get_theme_mod('color_primary', '#fff');
-    $color_body = get_theme_mod('color_body', '#020815');
+    $color_primary = get_theme_mod('color_primary', '#020815');
+    $color_body = get_theme_mod('color_body', '#fff');
     $color_secondary = get_theme_mod('color_secondary', '#f48513');
     $color_tertiary = get_theme_mod('color_tertiary', '#7e4ef3');
     $color_gradient = get_theme_mod('color_gradient', '#200224cf');
