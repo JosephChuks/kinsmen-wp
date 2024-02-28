@@ -89,6 +89,15 @@ function theme_customizer_settings($wp_customize)
         'priority' => 25,
     ));
 
+    $wp_customize->add_setting('color_body', array(
+        'default' => '#fff',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'color_body', array(
+        'label' => __('Text Color', 'kinsmen-wp'),
+        'section' => 'theme_colors',
+    )));
+
     $wp_customize->add_setting('color_primary', array(
         'default' => '#020815',
         'transport' => 'refresh',
@@ -128,6 +137,9 @@ function theme_customizer_settings($wp_customize)
     )));
 
 
+
+
+
     }
 
 add_action('customize_register', 'theme_customizer_settings');
@@ -135,7 +147,8 @@ add_action('customize_register', 'theme_customizer_settings');
 
 function custom_theme_customizer_styles()
     {
-    $color_primary = get_theme_mod('color_primary', '#020815');
+    $color_primary = get_theme_mod('color_primary', '#fff');
+    $color_body = get_theme_mod('color_body', '#020815');
     $color_secondary = get_theme_mod('color_secondary', '#f48513');
     $color_tertiary = get_theme_mod('color_tertiary', '#7e4ef3');
     $color_gradient = get_theme_mod('color_gradient', '#200224cf');
@@ -144,6 +157,9 @@ function custom_theme_customizer_styles()
     ?>
     <style type="text/css">
         :root {
+            --body-color:
+                <?php echo $color_body; ?>
+            ;
             --primary-color:
                 <?php echo $color_primary; ?>
             ;
